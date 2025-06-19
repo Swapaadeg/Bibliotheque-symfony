@@ -41,7 +41,7 @@ class Livre
 
     public function setTitre(string $titre): static
     {
-        $this->titre = ucfirst(trim($titre));
+        $this->titre = mb_strtoupper(trim($titre), 'UTF-8');
 
         return $this;
     }
